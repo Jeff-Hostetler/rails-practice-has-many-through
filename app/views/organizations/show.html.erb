@@ -1,0 +1,24 @@
+<div class="page-header">
+  <h1>Showing Organization <%= @organization.name %></h1>
+</div>
+
+<h2>People</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>
+        Name
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <div class="well">
+      <% @organization.people.each do |person| %>
+      <ul>
+        <%= person.name %>
+      </ul>
+      <% end %>
+    </div>
+  </tbody>
+</table>
